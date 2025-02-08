@@ -1,18 +1,36 @@
 body {
     margin: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: grey;
 }
 
+/*+ Custom Scoreboard Font imported **/
 @font-face {
     font-family: "Scores";
     src: url("scoreboard_font.ttf")
 }
 
 .container {
+    background-color: #1B244A;
     display: flex;
-    justify-content: space-around;w
+    justify-content: space-around;
+    margin: auto;
+    margin-top: 50px;
+    color: whitesmoke;
+    border-radius: 10px;
+    width: 575px;
+    height: 385px;
+    font-size: 40px;;
 }
 
 .counter {
     font-family: "Scores";
-    color:green;
+    color:#F84F6D;
+    font-size: 100px;
+    padding-top: 20px;
+    text-align: center;
+    background-color: #080001;
+    width: 155px;
+    height: 120px;
+    border-radius: 10px;
 }
