@@ -1,0 +1,18 @@
+body {
+    margin: 0;
+}
+
+@font-face {
+    font-family: "Scores";
+    src: url("scoreboard_font.ttf")
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;w
+}
+
+.counter {
+    font-family: "Scores";
+    color:green;
+}
