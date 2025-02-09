@@ -62,6 +62,43 @@ function newGame() {
     updateLeader()
 }
 
-if (scoreHome > scoreGuest) {
-    ctnHome.style.border = "3px solid green"
+// TODO: Timing feature
+
+let timerMin = document.getElementById("min")
+let timerSec = document.getElementById("sec")
+
+let minutes = 0
+let seconds = 0
+
+timerMin.textContent = minutes
+timerSec.textContent = seconds
+
+function pause() {
+    clearInterval(cron)
 }
+
+function startTimer() {
+    pause()
+    cron = setInterval(() => { timer(); }, 10);
+}
+
+function timer() {
+    if ((millisecond += 10) == 1000) {
+        millisecond = 0;
+        second++;
+      }
+      if (second == 60) {
+        second = 0;
+        minute++;
+      }
+      if (minute == 60) {
+        minute = 0;
+        hour++;
+      }
+      timerMin.textContent  = returnData(minute);
+      timerSec.textContent = returnData(second);
+}
+
+function returnData(input) {
+    return input > 10 ? input : `0${input}`
+  }
