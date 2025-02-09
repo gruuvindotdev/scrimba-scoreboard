@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: grey;
+    background-color: black;
 }
 
 /*+ Custom Scoreboard Font imported **/
@@ -33,4 +33,19 @@ body {
     width: 155px;
     height: 120px;
     border-radius: 10px;
+}
+
+.scores {
+    text-align: center;
+}
+
+button {
+    font-family: "Scores";
+    font-size: 18px;
+    background-color: transparent;
+    border: 3px  solid #9AABD8;
+    border-radius: 5px;
+    height: 45px;
+    width: 45px;
+    color: #9AABD8;
 }
