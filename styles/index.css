@@ -19,7 +19,7 @@ body {
     color: whitesmoke;
     border-radius: 10px;
     width: 575px;
-    height: 385px;
+    height: 485px;
     font-size: 40px;;
 }
 
@@ -49,3 +49,8 @@ button {
     width: 45px;
     color: #9AABD8;
 }
+
+.extraBtn {
+    width: 160px;
+}
+

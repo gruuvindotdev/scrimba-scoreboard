@@ -29,9 +29,14 @@ function addGuest2() {
     ctnGuest.textContent = scoreGuest
 }
 
-// FIXME: add another function
 function addGuest3() {
     scoreGuest += 3
     ctnGuest.textContent = scoreGuest
 }
 
+function newGame() {
+    scoreHome = 0
+    scoreGuest = 0
+    ctnHome.textContent = scoreHome
+    ctnGuest.textContent = scoreGuest
+}
