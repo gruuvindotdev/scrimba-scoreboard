@@ -54,6 +54,22 @@ button {
     width: 160px;
 }
 
-.timer {
-    color:white;
+#startBtn, #stopBtn {
+    width: 75px;
+}
+
+#timer {
+    text-align: center;
+    width: 155px;
+    padding-top: 20px;
+    margin: auto;
+    font-size: 70px;
+    font-family: "Scores";
+    color:#F84F6D;
+}
+
+#time {
+    font-size: 30px;
+    color: white;
+    margin: auto;
 }

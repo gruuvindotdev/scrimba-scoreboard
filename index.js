@@ -60,45 +60,38 @@ function newGame() {
     ctnHome.textContent = scoreHome
     ctnGuest.textContent = scoreGuest
     updateLeader()
+    clearInterval(timerInterval);
+    minutes = 0;  // Reset minutes
+    seconds = 0;  // Reset seconds
+    updateTimerDisplay();
 }
 
-// TODO: Timing feature
-
-let timerMin = document.getElementById("min")
-let timerSec = document.getElementById("sec")
-
-let minutes = 0
-let seconds = 0
-
-timerMin.textContent = minutes
-timerSec.textContent = seconds
-
-function pause() {
-    clearInterval(cron)
-}
+let timerInterval;
+let seconds = 0;
+let isTimerRunning = false;
 
 function startTimer() {
-    pause()
-    cron = setInterval(() => { timer(); }, 10);
+    if (!isTimerRunning) {
+        isTimerRunning = true;
+        timerInterval = setInterval(() => {
+            seconds++;
+            updateTimerDisplay();
+        }, 1000);
+    }
 }
 
-function timer() {
-    if ((millisecond += 10) == 1000) {
-        millisecond = 0;
-        second++;
-      }
-      if (second == 60) {
-        second = 0;
-        minute++;
-      }
-      if (minute == 60) {
-        minute = 0;
-        hour++;
-      }
-      timerMin.textContent  = returnData(minute);
-      timerSec.textContent = returnData(second);
+function stopTimer() {
+    if (isTimerRunning) {
+        clearInterval(timerInterval);
+        isTimerRunning = false;
+    }
 }
 
-function returnData(input) {
-    return input > 10 ? input : `0${input}`
-  }
+function updateTimerDisplay() {
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = seconds % 60;
+    
+    document.getElementById("min").textContent = minutes.toString().padStart(2, "0");
+    document.getElementById("sec").textContent = remainingSeconds.toString().padStart(2, "0");
+}
+

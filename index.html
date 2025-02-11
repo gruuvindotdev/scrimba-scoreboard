@@ -7,8 +7,12 @@
     <title>Basketball Scoreboard</title>
 </head>
 <body>
+    <div id="timer">
+        <span id="time">TIME</span>
+        <span id="min">00</span>:<span id="sec">00</span>
+    </div>
     <div class="container">
-        <div>
+        <div>    
             <h3>HOME</h3>
             <div class="counter" id="ctn-home"></div>
             <div class="scores">
@@ -26,9 +30,10 @@
                 <button onclick="addGuest2()">+2</button>
                 <button onclick="addGuest3()">+3</button>
             </div>
+            <button onclick="startTimer()" id="startBtn">Start</button>
+            <button onclick="stopTimer()" id="stopBtn">Stop</button>
         </div>
     </div>
-    <div class="timer"><span id="min">00</span>:<span id="sec">00</span></div>
     <script src="index.js"></script>
 </body>
 </html> 
